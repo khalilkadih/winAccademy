@@ -3,7 +3,12 @@ package WinAccademy.system;
 import java.util.Scanner;
 
 public class Login {
- public void login(){
+    public Login() {
+        User user= new User();
+    }
+
+    public void login(){
+
 
     try(Scanner sc= new Scanner(System.in)){
 

@@ -12,8 +12,11 @@ public class User {
     private  String password;
     private int age ;
     private List<Adress> adresses;
-    private  List<Role> roles;
+    private  Role role;
     private Date dateInscription;
+    //default construtor
+    public User(){}
+
 
     public String getCin() {
         return cin;
@@ -41,10 +44,6 @@ public class User {
 
     public List<Adress> getAdresses() {
         return adresses;
-    }
-
-    public List<Role> getRoles() {
-        return roles;
     }
 
     public Date getDateInscription() {
@@ -79,26 +78,21 @@ public class User {
         this.adresses = adresses;
     }
 
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     public void setDateInscription(Date dateInscription) {
+
         this.dateInscription = dateInscription;
     }
-    //Added adress of user
 
-    public void AddAdress(Adress adrees)
-    {
-        adresses.add(adrees);
 
-    }
-    //Added Role of usder
-    public void AddRole(Role role){
-        roles.add(role);
-    }
-
-    public User(String cin, String nom, String telephone, String email, String password, int age, List<Adress> adresses, List<Role> roles, Date dateInscription) {
+    public User(String cin, String nom, String telephone, String email, String password, int age, List<Adress> adresses, Role roles, Date dateInscription) {
         this.cin = cin;
         this.nom = nom;
         this.telephone = telephone;
@@ -106,7 +100,7 @@ public class User {
         this.password = password;
         this.age = age;
         this.adresses = adresses;
-        this.roles = roles;
+        this.role = roles;
         this.dateInscription = dateInscription;
     }
 

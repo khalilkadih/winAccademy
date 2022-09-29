@@ -1,4 +1,4 @@
 package WinAccademy.system;
 
-public class Parent {
+public class Parent extends User {
 }

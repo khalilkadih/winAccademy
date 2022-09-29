@@ -1,4 +1,8 @@
 package WinAccademy.system;
 
-public class Salle {
+enum Salle {
+    Salle1,
+    salle2,
+    salle3,
+    salle4
 }

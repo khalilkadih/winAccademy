@@ -3,7 +3,7 @@ package WinAccademy.system;
 import java.util.ArrayList;
 import java.util.List;
 
-    enum Role {
+    public enum Role {
         Admin,
         Directeur,
         Professeur,

@@ -2,11 +2,13 @@ package WinAccademy.system;
 
 public class Deparetement {
     private  int id;
-    private  String Name;
+    private  String name;
+    int idColege;
 
-    public Deparetement(int id, String name) {
+    public Deparetement(int id, String name, int idColege) {
         this.id = id;
-        Name = name;
+        this.name = name;
+        this.idColege = idColege;
     }
 
     public int getId() {
@@ -18,10 +20,18 @@ public class Deparetement {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
+    }
+
+    public int getIdColege() {
+        return idColege;
+    }
+
+    public void setIdColege(int idColege) {
+        this.idColege = idColege;
     }
 }

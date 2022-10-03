@@ -82,9 +82,6 @@ public class User {
         return role;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
-    }
 
     public void setDateInscription(Date dateInscription) {
 
@@ -92,7 +89,7 @@ public class User {
     }
 
 
-    public User(String cin, String nom, String telephone, String email, String password, int age, List<Adress> adresses, Role roles, Date dateInscription) {
+    public User(String cin, String nom, String telephone, String email, String password, int age, List<Adress> adresses, Role role, Date dateInscription) {
         this.cin = cin;
         this.nom = nom;
         this.telephone = telephone;
@@ -100,7 +97,7 @@ public class User {
         this.password = password;
         this.age = age;
         this.adresses = adresses;
-        this.role = roles;
+        this.role = role;
         this.dateInscription = dateInscription;
     }
 

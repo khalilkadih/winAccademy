@@ -76,4 +76,7 @@ public class Note {
     public void setIdMatiere(int idMatiere) {
         this.idMatiere = idMatiere;
     }
+    public String toString(){
+        return "Votre Note est "+this.note+" Caractéristique  "+this.nomNote+" "+"de l'anne  annee scolaire "+this.anneScolaire+ "Pour etudiant "+this.idEtudiant+" de la matiere"+this.idMatiere;
+    }
 }

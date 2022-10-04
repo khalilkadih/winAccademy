@@ -13,8 +13,8 @@ public class Parent extends User {
         this.cin = cin;
     }
 
-    public Parent(String cin, String nom, String telephone, String email, String password, int age, List<Adress> adresses, Role role, Date dateInscription, int idParent, String cin1) {
-        super(cin, nom, telephone, email, password, age, adresses, role, dateInscription);
+    public Parent(String cin, String nom, String telephone, String email, String password, int age, int idAdress, Role role, Date dateInscription, int idParent, String cin1) {
+        super(cin, nom, telephone, email, password, age, idAdress, role, dateInscription);
         this.idParent = idParent;
         this.cin = cin1;
     }

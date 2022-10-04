@@ -5,19 +5,14 @@ import java.util.List;
 
 public class Professeur  extends  User{
    int idProfesseur;
-   String cin;
+
    int idSalle;
    int idMatiere;
 
-    public Professeur(int idProfesseur, String cin, int idSalle, int idMatiere) {
-        this.idProfesseur = idProfesseur;
-        this.cin = cin;
-        this.idSalle = idSalle;
-        this.idMatiere = idMatiere;
-    }
+   public Professeur(){}
 
-    public Professeur(String cin, String nom, String telephone, String email, String password, int age, List<Adress> adresses, Role role, Date dateInscription, int idProfesseur, String cin1, int idSalle, int idMatiere) {
-        super(cin, nom, telephone, email, password, age, adresses, role, dateInscription);
+    public Professeur(String cin, String nom, String telephone, String email, String password, int age, int  idAdress, Role role, Date dateInscription, int idProfesseur, String cin1, int idSalle, int idMatiere) {
+        super(cin, nom, telephone, email, password, age, idAdress, role, dateInscription);
         this.idProfesseur = idProfesseur;
         this.cin = cin1;
         this.idSalle = idSalle;
@@ -56,5 +51,10 @@ public class Professeur  extends  User{
 
     public void setIdMatiere(int idMatiere) {
         this.idMatiere = idMatiere;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+this.idMatiere+" "+this.idSalle;
     }
 }

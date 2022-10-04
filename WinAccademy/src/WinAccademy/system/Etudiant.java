@@ -1,14 +1,17 @@
 package WinAccademy.system;
 
-public class Etudiant {
+import java.util.Date;
+import java.util.List;
+
+public class Etudiant  extends User{
     int idEtudiant ;
-    String Cin;
+
     int idClasse;
     int idParent;
 
-    public Etudiant(int idEtudiant, String cin, int idClasse, int idParent) {
+    public Etudiant(String cin, String nom, String telephone, String email, String password, int age,int  idAdress, Role role, Date dateInscription, int idEtudiant,  int idClasse, int idParent) {
+        super(cin, nom, telephone, email, password, age, idAdress, role, dateInscription);
         this.idEtudiant = idEtudiant;
-        Cin = cin;
         this.idClasse = idClasse;
         this.idParent = idParent;
     }
@@ -21,13 +24,7 @@ public class Etudiant {
         this.idEtudiant = idEtudiant;
     }
 
-    public String getCin() {
-        return Cin;
-    }
 
-    public void setCin(String cin) {
-        Cin = cin;
-    }
 
     public int getIdClasse() {
         return idClasse;

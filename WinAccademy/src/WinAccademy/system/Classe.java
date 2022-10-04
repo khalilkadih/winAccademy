@@ -46,4 +46,5 @@ public class Classe {
     public void setIddepartement(int iddepartement) {
         this.iddepartement = iddepartement;
     }
+
 }

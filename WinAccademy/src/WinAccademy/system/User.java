@@ -5,15 +5,15 @@ import java.util.List;
 
 public class User {
 
-    private String cin ;
-    private  String nom;
-    private String telephone;
-    private String email;
-    private  String password;
-    private int age ;
-    private List<Adress> adresses;
-    private  Role role;
-    private Date dateInscription;
+    protected String cin ;
+    protected  String nom;
+    protected String telephone;
+    protected String email;
+    protected  String password;
+    protected int age ;
+    protected int idAdress;
+    protected  Role role;
+    protected Date dateInscription;
     //default construtor
     public User(){}
 
@@ -42,8 +42,8 @@ public class User {
         return age;
     }
 
-    public List<Adress> getAdresses() {
-        return adresses;
+    public int getIdAdress() {
+        return idAdress;
     }
 
     public Date getDateInscription() {
@@ -74,8 +74,8 @@ public class User {
         this.age = age;
     }
 
-    public void setAdresses(List<Adress> adresses) {
-        this.adresses = adresses;
+    public void setAdresses(int idAdress) {
+        this.idAdress = idAdress;
     }
 
     public Role getRole() {
@@ -89,16 +89,21 @@ public class User {
     }
 
 
-    public User(String cin, String nom, String telephone, String email, String password, int age, List<Adress> adresses, Role role, Date dateInscription) {
+    public User(String cin, String nom, String telephone, String email, String password, int age, int idAdress, Role role, Date dateInscription) {
         this.cin = cin;
         this.nom = nom;
         this.telephone = telephone;
         this.email = email;
         this.password = password;
         this.age = age;
-        this.adresses = adresses;
+        this.idAdress = idAdress;
         this.role = role;
         this.dateInscription = dateInscription;
     }
+
+    public String toString(){
+        return  "your profil: you cin is "+this.cin+" your name :"+this.nom+" your telephone "+this.telephone+" your email is: "+this.email+" your age : "+this.age+" your adress is"+this.idAdress+" Role :"+this.role+" "+this.dateInscription;
+    }
+
 
 }

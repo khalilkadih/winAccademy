@@ -63,11 +63,41 @@ public class Utilities {
            System.out.println("user Not Found !!!");
        }
     }
-
     public static void afficherNoteEtudiant(){
         System.out.println("Note  disponible est ");
         Main.note.stream().filter(note -> note instanceof Note).forEach(System.out::println);
     }
+    public static void deleteMatiere( int idMatiere){
+        Optional<Matiere> optionalMatiere = Main.matiere.stream().filter(matiere -> matiere instanceof Matiere && matiere.getIdMatiere()==((idMatiere))).findFirst();
+        if(optionalMatiere.isPresent()){
+            Matiere matiere= (Matiere) optionalMatiere.get();
+            Main.matiere.remove(matiere);
+            System.out.println("Matiere deleted Successfully");
+        }
+        else {
+            System.out.println("Something Wrong !!!!");
+        }
+
+    }
+    public static void showAllEtudiant(){
+        System.out.println("les etudiant disponible est ");
+        Main.users.stream().filter(user -> user instanceof Etudiant).forEach(System.out::println);
+
+
+    }
+    public static void showAllClass(){
+        Main.classe.stream().filter(classe -> classe instanceof  Classe).forEach(System.out::println);
+    }
+    public static void ShowAllDepartement(){
+        System.out.println("hello");
+        Main.departement.stream().filter(dep -> dep instanceof Deparetement).forEach(System.out::println);
+    }
+
+    public static void ShowAllCollege() {
+    Main.college.stream().filter(college -> college instanceof  College).forEach(System.out::println);
+
+    }
+
 
 }
 

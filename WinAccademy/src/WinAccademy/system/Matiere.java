@@ -34,4 +34,13 @@ Salle salle;
     public void setSalle(Salle salle) {
         this.salle = salle;
     }
+
+    @Override
+    public String toString() {
+        return "Matiere{" +
+                "idMatiere=" + idMatiere +
+                ", nomMatiere='" + nomMatiere + '\'' +
+                ", salle=" + salle +
+                '}';
+    }
 }

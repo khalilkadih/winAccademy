@@ -47,4 +47,13 @@ public class Classe {
         this.iddepartement = iddepartement;
     }
 
+    @Override
+    public String toString() {
+        return "Classe{" +
+                "idClasse=" + idClasse +
+                ", nomClasse='" + nomClasse + '\'' +
+                ", annescolaire=" + annescolaire +
+                ", iddepartement=" + iddepartement +
+                '}';
+    }
 }

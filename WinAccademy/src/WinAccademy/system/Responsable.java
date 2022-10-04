@@ -34,4 +34,13 @@ public class Responsable {
     public void setIdDepartement(int idDepartement) {
         this.idDepartement = idDepartement;
     }
+
+    @Override
+    public String toString() {
+        return "Responsable{" +
+                "idResponsable=" + idResponsable +
+                ", idProfesseur=" + idProfesseur +
+                ", idDepartement=" + idDepartement +
+                '}';
+    }
 }

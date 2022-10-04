@@ -26,14 +26,16 @@ public class Main {
         Adress youssoufiaAdress =new Adress(2,"maroc","youssoufia","av Youssoufia");
         adresses.add(agadirAdress);
         adresses.add(youssoufiaAdress);
-        users.add(new User("JT42796","khalil","0666666666","khalil@gmail.com","khalil@",28,agadirAdress.getId() , Role.Etudiant,new Date()));
-        //users.add(new Professeur("JT11111","BOUCHRA","066666666","bouchra@gmail.com","bouchra@",30, agadirAdress.getId(),Role.Professeur,new Date()));
+
+        users.add(new Etudiant("JT42796","khalil","0666666666","khalil@gmail.com","khalil@",28,agadirAdress.getId() , Role.Etudiant,new Date(),1,1,1,1));
+        users.add(new Professeur("JT11111","BOUCHRA","066666666","bouchra@gmail.com","bouchra@",30, agadirAdress.getId(),Role.Professeur,new Date(),1,1,1));
         users.add(new User("JT22222","Mourad","0666666666","mourad@gmail.com","mourad@",33, agadirAdress.getId(),Role.Directeur,new Date()));
         users.add(new User("JT33333","Adil","0666666666","adil@gmail.com","adil@",33, agadirAdress.getId(),Role.Admin,new Date()));
         users.add(new User("JT44444","ABDO","0666666666","abdo@gmail.com","abdo@",55, agadirAdress.getId(),Role.Parent,new Date()));
         users.add(new Admin("JT12345","adilo","0666666666","adilo@gmail.com","adilo@",44,youssoufiaAdress.getId(),Role.Admin,new Date()));
-        users.add(new Etudiant("JT42799","omar","066666","omar@gmail.com","omar@",44,youssoufiaAdress.getId(),Role.Etudiant,new Date(),2,1,1));
-        users.add(new Professeur("JT66765","ahmed","09876543","ahmed@gmail.com","ahmed@",30,agadirAdress.getId(),Role.Professeur,new Date(),6,"JT66765",5,2));
+        users.add(new Etudiant("JT42799","omar","066666","omar@gmail.com","omar@",26,agadirAdress.getId(),Role.Etudiant,new Date(),2,1,2,1));
+        users.add(new Etudiant("JT42798","agra","066666","agra@gmail.com","agra@",26,agadirAdress.getId(),Role.Etudiant,new Date(),2,1,2,1));
+        users.add(new Professeur("JT66765","ahmed","09876543","ahmed@gmail.com","ahmed@",30,agadirAdress.getId(),Role.Professeur,new Date(),6,5,2));
 
          //Ajouter les classe
         classe.add(new Classe(1,"class of java",new Date(2022,10,22),1));

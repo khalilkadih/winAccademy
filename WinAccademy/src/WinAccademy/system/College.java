@@ -44,4 +44,14 @@ public class College {
     public void setIdDirecteur(int idDirecteur) {
         this.idDirecteur = idDirecteur;
     }
+
+    @Override
+    public String toString() {
+        return "College{" +
+                "idColege=" + idColege +
+                ", nomCollege='" + nomCollege + '\'' +
+                ", idAdmin=" + idAdmin +
+                ", idDirecteur=" + idDirecteur +
+                '}';
+    }
 }

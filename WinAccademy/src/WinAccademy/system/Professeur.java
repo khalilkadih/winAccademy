@@ -11,10 +11,9 @@ public class Professeur  extends  User{
 
    public Professeur(){}
 
-    public Professeur(String cin, String nom, String telephone, String email, String password, int age, int  idAdress, Role role, Date dateInscription, int idProfesseur, String cin1, int idSalle, int idMatiere) {
+    public Professeur(String cin, String nom, String telephone, String email, String password, int age, int  idAdress, Role role, Date dateInscription, int idProfesseur, int idSalle, int idMatiere) {
         super(cin, nom, telephone, email, password, age, idAdress, role, dateInscription);
         this.idProfesseur = idProfesseur;
-        this.cin = cin1;
         this.idSalle = idSalle;
         this.idMatiere = idMatiere;
     }

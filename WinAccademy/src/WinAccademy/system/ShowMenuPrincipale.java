@@ -12,9 +12,10 @@ public class ShowMenuPrincipale {
             System.out.println(" \t\t\t\t   Welcome to WinAccademy!     ");
             System.out.println(" \t\t\t\t   Menu Principale!            ");
             System.out.println(" 1:Ajouter Directeur");
-            System.out.println(" 2: Modifier Directeur");
-            System.out.println(" 3: Afficher Directeur");
-            System.out.println(" 4: Afficher Profile");
+            System.out.println(" 2:Modifier Directeur");
+            System.out.println(" 3:Afficher Directeur");
+            System.out.println(" 4:Show All College");
+            System.out.println(" 5:Afficher Profile");
 
             Scanner sc = new Scanner(System.in);
             int selectionAdmin;
@@ -26,7 +27,6 @@ public class ShowMenuPrincipale {
             switch (selectionAdmin) {
                 case 1:
                     System.out.println("1:Ajouter Directeur");
-
                     break;
                 case 2:
                     System.out.println("2: Modifier Directeur\"");
@@ -35,7 +35,11 @@ public class ShowMenuPrincipale {
                     System.out.println("3: Afficher Directeurs");
                     break;
                 case 4:
-                    System.out.println("4: Afficher Profile");
+                    System.out.println("All College Dispo :");
+                    Utilities.ShowAllCollege();
+                    break;
+                case 5:
+                    System.out.println("6: Afficher Profile");
                     break;
                 default:
                     System.out.println("pour retenir a la menu principale taper une touche");
@@ -48,15 +52,18 @@ public class ShowMenuPrincipale {
             System.out.println(" \t\t\t\tWelcome to WinAccademy!");
             System.out.println(" \t\t\t\tMenu Principale!");
             System.out.println(" 1:Ajouter professeur");
-            System.out.println(" 2: Modifier professeur");
-            System.out.println(" 3: afficher professeur/professeurs");
+            System.out.println(" 2:Modifier professeur");
+            System.out.println(" 3:afficher professeur/professeurs");
             System.out.println(" 4:Ajouter Matiere");
-            System.out.println(" 5: Modifier Matiere");
-            System.out.println(" 6: Supprimer Matiere");
+            System.out.println(" 5:Modifier Matiere");
+            System.out.println(" 6:Supprimer Matiere");
             System.out.println(" 7:Ajouter etudiant");
-            System.out.println(" 8: Modifier etudiant");
-            System.out.println(" 9: afficher etudiant/etudiantS");
-            System.out.println("10: Afficher Profile");
+            System.out.println(" 8:Modifier etudiant");
+            System.out.println(" 9:afficher etudiant/etudiants");
+            System.out.println("10:Show All  Departement");
+            System.out.println("11:Show All Classse");
+            System.out.println("12:Afficher Profile");
+
             Scanner sc = new Scanner(System.in);
             int selectionDirecteur;
             do {
@@ -67,7 +74,7 @@ public class ShowMenuPrincipale {
 
                 selectionDirecteur = sc.nextInt();
 
-            } while (selectionDirecteur < 1 || selectionDirecteur > 11);
+            } while (selectionDirecteur < 1 || selectionDirecteur > 13);
             switch (selectionDirecteur) {
                 case 1:
                     System.out.println(" 1:Ajouter professeur");
@@ -94,6 +101,12 @@ public class ShowMenuPrincipale {
                     break;
                 case 6:
                     System.out.println(" 6 : Supprimer Matiere");
+                    System.out.println("Enter id of Matiere you want to delete");
+                    sc=new Scanner(System.in);
+                    int idMatiereDelete= sc.nextInt();
+                    System.out.println(" Size of Aarray of Matiere Befor :"+Main.matiere.size());
+                    Utilities.deleteMatiere(idMatiereDelete);
+                    System.out.println(" Size of Aarray of Matiere After :"+Main.matiere.size());
                     break;
                 case 7:
                     System.out.println(" 7 : Ajouter etudiant");
@@ -102,10 +115,19 @@ public class ShowMenuPrincipale {
                     System.out.println("8 : Modifier etudiant");
                     break;
                 case 9:
-                    System.out.println("9: afficher etudiantS");
+                    System.out.println("9: afficher etudiants");
+                    Utilities.showAllEtudiant();
+
                     break;
                 case 10:
-                    System.out.println("10: Afficher Profile");
+                    System.out.println("5: Show All  Departement");
+                    Utilities.ShowAllDepartement();
+                    break;
+                case 11:
+                    System.out.println("Show All Classe");
+                    Utilities.showAllClass();
+                case 12:
+                    System.out.println("11: Afficher Profile");
                     break;
                 default:
                     System.out.println("pour retenir a la menu principale taper une touche");

@@ -34,4 +34,13 @@ public class Deparetement {
     public void setIdColege(int idColege) {
         this.idColege = idColege;
     }
+
+    @Override
+    public String toString() {
+        return "Deparetement{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", idColege=" + idColege +
+                '}';
+    }
 }

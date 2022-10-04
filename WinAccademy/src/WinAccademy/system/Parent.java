@@ -36,4 +36,21 @@ public class Parent extends User {
     public void setCin(String cin) {
         this.cin = cin;
     }
+
+    @Override
+    public String toString() {
+        return "Parent{" +
+                "idParent=" + idParent +
+                ", cin='" + cin + '\'' +
+                ", cin='" + cin + '\'' +
+                ", nom='" + nom + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", age=" + age +
+                ", idAdress=" + idAdress +
+                ", role=" + role +
+                ", dateInscription=" + dateInscription +
+                '}';
+    }
 }

@@ -191,6 +191,22 @@ public class Utilities {
         Main.users.stream().filter(user -> user instanceof Directeur).forEach(System.out::println);
     }
 
+    public static void InsertDataMatiere() {
+        Matiere matiere = new Matiere();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Entrer idMatiere");
+        matiere.setIdMatiere(sc.nextInt());
+        System.out.println("Entrer Nom Mateire");
+        matiere.setNomMatiere(sc.nextLine());
+        System.out.println("Entrer Salle Matiere");
+        matiere.setSalle((Salle.Salle1));
+        Main.matiere.add(matiere);
+    }
+    public static void affichageInfoMatiere() {
+        System.out.println("les Matiere disponible est ");
+        Main.matiere.stream().filter(matiere -> matiere instanceof Matiere).forEach(System.out::println);
+    }
+
 }
 
 

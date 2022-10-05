@@ -17,6 +17,7 @@ public class ShowMenuPrincipale {
             System.out.println(" 4:Show All College");
             System.out.println(" 5:Afficher Profile");
 
+
             Scanner sc = new Scanner(System.in);
             int selectionAdmin;
             do {
@@ -27,8 +28,8 @@ public class ShowMenuPrincipale {
             switch (selectionAdmin) {
                 case 1:
                     System.out.println("1:Ajouter Directeur");
-
-
+                    Utilities.InsertDataDirecteur();
+                    Utilities.affichageInfoDirecteur();
                     break;
                 case 2:
                     System.out.println("2: Modifier Directeur\"");
@@ -40,7 +41,7 @@ public class ShowMenuPrincipale {
                     break;
                 case 3:
                     System.out.println("3: Afficher Directeurs");
-                    Utilities.InsertDataDirecteur();
+                    Utilities.affichageInfoDirecteur();
                     break;
                 case 4:
                     System.out.println("All College Dispo :");
@@ -48,7 +49,8 @@ public class ShowMenuPrincipale {
                     break;
                 case 5:
                     System.out.println("6: Afficher Profile");
-                    break;
+                    ShowProfils(user);
+                        break;
                 default:
                     System.out.println("pour retenir a la menu principale taper une touche");
             }
@@ -105,6 +107,8 @@ public class ShowMenuPrincipale {
                     break;
                 case 4:
                     System.out.println("4:Ajouter Matiere");
+                    Utilities.InsertDataMatiere();
+                    Utilities.affichageInfoMatiere();
                     break;
                 case 5:
                     System.out.println("5 :Modifier Matiere");
@@ -147,6 +151,8 @@ public class ShowMenuPrincipale {
                     break;
                 case 13:
                     System.out.println("11: Afficher Profile");
+                    ShowProfils(user);
+
                     break;
                 default:
                     System.out.println("pour retenir a la menu principale taper une touche");

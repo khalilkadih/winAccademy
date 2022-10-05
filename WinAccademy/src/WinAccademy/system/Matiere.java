@@ -4,6 +4,9 @@ public class Matiere {
 int idMatiere;
 String nomMatiere;
 Salle salle;
+public Matiere(){
+
+}
 
     public Matiere(int idMatiere, String nomMatiere, Salle salle) {
         this.idMatiere = idMatiere;

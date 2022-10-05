@@ -8,6 +8,7 @@ public class Directeur extends User{
     int idDirecteur;
     String cin;
 
+    public Directeur(){}
     public Directeur(int idDirecteur, String cin) {
         this.idDirecteur = idDirecteur;
         this.cin = cin;
@@ -74,5 +75,20 @@ public class Directeur extends User{
 
     }
 
-
+    @Override
+    public String toString() {
+        return "Directeur{" +
+                "idDirecteur=" + idDirecteur +
+                ", cin='" + cin + '\'' +
+                ", cin='" + cin + '\'' +
+                ", nom='" + nom + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", age=" + age +
+                ", idAdress=" + idAdress +
+                ", role=" + role +
+                ", dateInscription=" + dateInscription +
+                '}';
+    }
 }

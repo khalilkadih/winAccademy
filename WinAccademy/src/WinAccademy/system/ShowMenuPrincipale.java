@@ -27,12 +27,20 @@ public class ShowMenuPrincipale {
             switch (selectionAdmin) {
                 case 1:
                     System.out.println("1:Ajouter Directeur");
+
+
                     break;
                 case 2:
                     System.out.println("2: Modifier Directeur\"");
+                    System.out.println("Entrer Cin of user");
+                    sc=new Scanner(System.in);
+                    String cinDirecteur = sc.nextLine();
+                   Utilities.modifierDirecteurData(cinDirecteur);
+                   ShowMenuPrincipale.ShowMenuPrincipale(user);
                     break;
                 case 3:
                     System.out.println("3: Afficher Directeurs");
+                    Utilities.InsertDataDirecteur();
                     break;
                 case 4:
                     System.out.println("All College Dispo :");
@@ -62,7 +70,8 @@ public class ShowMenuPrincipale {
             System.out.println(" 9:afficher etudiant/etudiants");
             System.out.println("10:Show All  Departement");
             System.out.println("11:Show All Classse");
-            System.out.println("12:Afficher Profile");
+            System.out.println("12:Calcule Moyen Note d'etudiant");
+            System.out.println("13:Afficher Profile");
 
             Scanner sc = new Scanner(System.in);
             int selectionDirecteur;
@@ -74,7 +83,7 @@ public class ShowMenuPrincipale {
 
                 selectionDirecteur = sc.nextInt();
 
-            } while (selectionDirecteur < 1 || selectionDirecteur > 13);
+            } while (selectionDirecteur < 1 || selectionDirecteur > 14);
             switch (selectionDirecteur) {
                 case 1:
                     System.out.println(" 1:Ajouter professeur");
@@ -92,6 +101,7 @@ public class ShowMenuPrincipale {
                     System.out.println("3: afficher professeurs");
                     Utilities.affichageInfoProfesseur();
                     ShowMenuPrincipale(user);
+
                     break;
                 case 4:
                     System.out.println("4:Ajouter Matiere");
@@ -110,6 +120,9 @@ public class ShowMenuPrincipale {
                     break;
                 case 7:
                     System.out.println(" 7 : Ajouter etudiant");
+                    Utilities.InsertDataEtudiant();
+                    Utilities.showAllEtudiant();
+                    ShowMenuPrincipale.ShowMenuPrincipale(user);
                     break;
                 case 8:
                     System.out.println("8 : Modifier etudiant");
@@ -126,7 +139,13 @@ public class ShowMenuPrincipale {
                 case 11:
                     System.out.println("Show All Classe");
                     Utilities.showAllClass();
+                    break;
                 case 12:
+                    System.out.println("Moyen de departement");
+                    System.out.println( "La Moyen de la departement est :"+Utilities.avgNoteOfEtudiant(Main.note));
+                    System.out.println("end");
+                    break;
+                case 13:
                     System.out.println("11: Afficher Profile");
                     break;
                 default:

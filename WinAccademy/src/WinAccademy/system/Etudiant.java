@@ -12,6 +12,7 @@ public class Etudiant  extends User{
 
 
 
+public Etudiant(){}
 
     public Etudiant(String cin, String nom, String telephone, String email, String password, int age, int idAdress, Role role, Date dateInscription, int idEtudiant, int idClasse, int idProfesseur, int idParent) {
         super(cin, nom, telephone, email, password, age, idAdress, role, dateInscription);

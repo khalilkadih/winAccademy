@@ -16,7 +16,7 @@ public class Main {
      static  User loggedInUser ;
     public static void main(String[] args) {
         insertData();
-        while(!Utilities.login()){
+      while(!Utilities.login()){
             System.out.println("Les infos Incorrect !!!");
         };
         ShowMenuPrincipale.ShowMenuPrincipale(loggedInUser);
@@ -56,7 +56,7 @@ public class Main {
          matiere.add(new Matiere(3,"concept of c3",Salle.salle4));
 
          //Ajouter Note
-         note.add(new Note(1,"tres bien ",16,new Date(2022,10,22),"sprint 1",1,1));
+         note.add(new Note(1,"tres bien ",20,new Date(2022,10,22),"sprint 1",1,1));
          note.add(new Note(2,"bien ",15,new Date(2022,10,22),"sprint 1",1,2));
          note.add(new Note(3,"tres bien ",16,new Date(2022,10,22),"sprint 1",1,3));
 

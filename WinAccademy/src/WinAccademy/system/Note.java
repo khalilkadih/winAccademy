@@ -3,13 +3,13 @@ package WinAccademy.system;
 import java.util.Date;
 
 public class Note {
-    int idNote;
-    String nomNote;
-    float note;
-    Date anneScolaire;
-    String sprint ;
-    int idEtudiant ;
-    int idMatiere ;
+     public int idNote;
+    public String nomNote;
+    public float note;
+    public Date anneScolaire;
+    public String sprint ;
+    public int idEtudiant ;
+    public int idMatiere ;
 
     public Note(int idNote, String nomNote, float note, Date anneScolaire, String sprint, int idEtudiant, int idMatiere) {
         this.idNote = idNote;
@@ -79,4 +79,5 @@ public class Note {
     public String toString(){
         return "Votre Note est "+this.note+" Caractéristique  "+this.nomNote+" "+"de l'anne  annee scolaire "+this.anneScolaire+ "Pour etudiant "+this.idEtudiant+" de la matiere"+this.idMatiere;
     }
+
 }

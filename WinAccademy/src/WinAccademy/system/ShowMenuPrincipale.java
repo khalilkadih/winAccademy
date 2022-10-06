@@ -130,6 +130,7 @@ public class ShowMenuPrincipale {
                     break;
                 case 8:
                     System.out.println("8 : Modifier etudiant");
+
                     break;
                 case 9:
                     System.out.println("9: afficher etudiants");
@@ -171,24 +172,27 @@ public class ShowMenuPrincipale {
             System.out.println(" 4: Afficher Profile");
             Scanner sc = new Scanner(System.in);
             int selectionProfesseur;
-            do {
-/*
-                System.out.println("<><><><><> le choix saisir pas disponible dans le menu <><><><><>");
-*/
+            do {/*
+                System.out.println("<><><><><> le choix saisir pas disponible dans le menu <><><><><>");*/
                 System.out.println("        Veillez-vous Choisir votre choix");
-
                 selectionProfesseur = sc.nextInt();
-
             } while (selectionProfesseur < 1 || selectionProfesseur > 4);
             switch (selectionProfesseur) {
                 case 1:
                     System.out.println("1:Ajouter Note");
+                    Utilities.InsertNote();
+                    Utilities.affichageNote();
                     break;
                 case 2:
                     System.out.println(" 2: Modifier Note");
+                    System.out.println("Enter id of Note you want to update");
+                    sc=new Scanner(System.in);
+                    int idMatiereupdate= sc.nextInt();
+                    Utilities.ModifieNote(idMatiereupdate);
                     break;
                 case 3:
                     System.out.println("2: Afficher Note");
+                    Utilities.affichageNote();
                     break;
                 case 4:
                     System.out.println("Afficher Profile");
@@ -197,8 +201,6 @@ public class ShowMenuPrincipale {
                 default:
                     System.out.println("pour retenir a la menu principale taper une touche");
             }
-
-
         } else if (user.getRole().equals(Role.Etudiant)) {
             System.out.println("=================================================================");
             System.out.println("=================================================================");
@@ -211,18 +213,16 @@ public class ShowMenuPrincipale {
             Scanner sc = new Scanner(System.in);
             int selectionEtudiant;
             do {
-/*
-                System.out.println("<><><><><> le choix saisir pas disponible dans le menu <><><><><>");
-*/
                 System.out.println("        Veillez-vous Choisir votre choix");
-
                 selectionEtudiant = sc.nextInt();
-
             } while (selectionEtudiant < 1 || selectionEtudiant > 2);
             switch (selectionEtudiant) {
                 case 1:
                     System.out.println(" 1: Afficher votre note ");
-                    Utilities.afficherNoteEtudiant();
+                    sc= new Scanner(System.in);
+                    System.out.println("Entrer votre id");
+                    int idEtudiant=(sc.nextInt());
+                    Utilities.showNoteEtudiant(idEtudiant);
                     break;
                 case 2:
                     System.out.println("2: Afficher votre profile ");
@@ -242,17 +242,18 @@ public class ShowMenuPrincipale {
             System.out.println(" 2: Afficher votre profile ");
             Scanner sc = new Scanner(System.in);
             int selectionParent;
-            do {
-/*
-                System.out.println("<><><><><> le choix saisir pas disponible dans le menu <><><><><>");
-*/
+            do {/*
+                System.out.println("<><><><><> le choix saisir pas disponible dans le menu <><><><><>");*/
                 System.out.println("        Veillez-vous Choisir votre choix");
                 selectionParent = sc.nextInt();
             } while (selectionParent < 1 || selectionParent > 2);
             switch (selectionParent) {
                 case 1:
                     System.out.println("1: Afficher la note");
-                    Utilities.afficherNoteEtudiant();
+                    System.out.println("Enter id of l'etudiant");
+                    sc=new Scanner(System.in);
+                    int idEtudiant= sc.nextInt();
+                    Utilities.showNoteEtudiant(idEtudiant);
                     break;
                 case 2:
                     System.out.println("2: Afficher votre profile");

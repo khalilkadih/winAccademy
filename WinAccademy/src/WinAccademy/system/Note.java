@@ -10,6 +10,7 @@ public class Note {
     public String sprint ;
     public int idEtudiant ;
     public int idMatiere ;
+    public Note(){}
 
     public Note(int idNote, String nomNote, float note, Date anneScolaire, String sprint, int idEtudiant, int idMatiere) {
         this.idNote = idNote;

@@ -206,7 +206,59 @@ public class Utilities {
         System.out.println("les Matiere disponible est ");
         Main.matiere.stream().filter(matiere -> matiere instanceof Matiere).forEach(System.out::println);
     }
+    public static void InsertNote() {
+        Note note = new Note();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Entrer idNote");
+        note.setIdNote(sc.nextInt());
+        System.out.println("Entrer caracteristique");
+        note.setNomNote(sc.nextLine());
+        System.out.println("Entrer l'Anne Scolaire ");
+        note.setAnneScolaire(new Date());
+        System.out.println("Entrer Sprint");
+        note.setSprint(sc.nextLine());
+        System.out.println("Entrer idEtudiant");
+        note.setIdEtudiant(sc.nextInt());
+        System.out.println("Entrer idMatiere");
+        note.setIdMatiere(sc.nextInt());
+        Main.note.add(note);
+    }
+    public static void affichageNote() {
+        System.out.println("les Note disponible est ");
+        Main.note.stream().filter(note -> note instanceof Note).forEach(System.out::println);
+    }
 
+        public static void ModifieNote(int idNote){
+            Optional<Note> optionalNote = Main.note.stream().filter(note -> note instanceof Note && note.getIdNote()==((idNote))).findFirst();
+            if(optionalNote.isPresent()){
+                Note note= (Note) optionalNote.get();
+                System.out.println("you can update now");
+                Scanner sc= new Scanner(System.in);
+                System.out.println("Entrer caracteristique");
+                note.setNomNote(sc.nextLine());
+                System.out.println("Entrer l'Anne Scolaire ");
+                note.setAnneScolaire(new Date());
+                System.out.println("Entrer Sprint");
+                note.setSprint(sc.nextLine());
+                System.out.println("Entrer idEtudiant");
+                note.setIdEtudiant(sc.nextInt());
+                System.out.println("Entrer idMatiere");
+                note.setIdMatiere(sc.nextInt());
+                affichageNote();
+            }
+            else System.out.println("user Not Found !!!");
+
+        }
+
+        public static void showNoteEtudiant(int idEtudiant){
+            Optional<Note> optionalNote = Main.note.stream().filter(note -> note instanceof Note && note.getIdNote()==((idEtudiant))).findFirst();
+            if (optionalNote.isPresent()){
+                Main.note.stream().filter(note -> note.getIdNote()==idEtudiant).forEach(System.out::println);
+
+            }else {
+                System.out.println("Student don't Found");
+            }
+        }
 }
 
 

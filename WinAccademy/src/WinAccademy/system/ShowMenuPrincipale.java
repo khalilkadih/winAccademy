@@ -78,9 +78,7 @@ public class ShowMenuPrincipale {
             Scanner sc = new Scanner(System.in);
             int selectionDirecteur;
             do {
-/*
-                System.out.println("<><><><><> le choix saisir pas disponible dans le menu <><><><><>");
-*/
+                /*System.out.println("<><><><><> le choix saisir pas disponible dans le menu <><><><><>");*/
                 System.out.println("        Veillez-vous Choisir votre choix");
 
                 selectionDirecteur = sc.nextInt();

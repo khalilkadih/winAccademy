@@ -1,5 +1,6 @@
 package WinAccademy.system;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import com.sun.org.glassfish.external.statistics.Stats;
 
 import java.util.*;
@@ -153,7 +154,11 @@ public class Utilities {
         System.out.println("Entrer Password");
         directeur.setPassword(sc.nextLine());
         System.out.println("Entrer directeur");
+        System.out.println("Select id directeur");
+        selectDirecteur();
+/*
         directeur.setIdDirecteur(sc.nextInt());
+*/
         System.out.println("Entrer Age");
         directeur.setAge(sc.nextInt());
         System.out.println("Entrer Date d'inscription (jj/MM/AAAA");
@@ -259,6 +264,19 @@ public class Utilities {
                 System.out.println("Student don't Found");
             }
         }
+
+    public static int  selectDirecteur() {
+        while (true) {
+            System.out.println("Veullez chois le directeru");
+            System.out.println("id     nom directeur");
+            Main.users.stream().filter(directeur -> directeur instanceof Directeur).map(u -> (Directeur) u).forEach(directeur -> System.out.println(directeur.getIdDirecteur() + "     " + directeur.getNom()));
+            int directeurId = new Scanner(System.in).nextInt();
+            Optional<User> optionalDirecteur = Main.users.stream().filter(directeur -> directeur instanceof Directeur && ((Directeur) directeur).getIdDirecteur() == directeurId).findFirst();
+            if (optionalDirecteur.isPresent())
+                return directeurId;
+        }
+    }
+
 }
 
 

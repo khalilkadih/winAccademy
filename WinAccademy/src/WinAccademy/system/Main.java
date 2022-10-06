@@ -19,7 +19,8 @@ public class Main {
       while(!Utilities.login()){
             System.out.println("Les infos Incorrect !!!");
         };
-        ShowMenuPrincipale.ShowMenuPrincipale(loggedInUser);
+        ShowMenuPrincipale.ShowMenuPrincipale(loggedInUser)
+;
     }
      public  static  void insertData(){
         Adress agadirAdress =new Adress(1,"maroc","Agadir","av agadir");
@@ -36,6 +37,7 @@ public class Main {
         users.add(new Etudiant("JT42799","omar","066666","omar@gmail.com","omar@",26,agadirAdress.getId(),Role.Etudiant,new Date(),2,1,2,1));
         users.add(new Etudiant("JT42798","agra","066666","agra@gmail.com","agra@",26,agadirAdress.getId(),Role.Etudiant,new Date(),2,1,2,1));
         users.add(new Professeur("JT66765","ahmed","09876543","ahmed@gmail.com","ahmed@",30,agadirAdress.getId(),Role.Professeur,new Date(),6,5,2));
+        users.add(new Directeur("jttttt","Mohamed","06666666666","med@gmail.com","med@",44,1,Role.Directeur,new Date(),6));
 
          //Ajouter les classe
         classe.add(new Classe(1,"class of java",new Date(2022,10,22),1));
